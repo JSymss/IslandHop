@@ -6,6 +6,8 @@ public class treeInteract : MonoBehaviour
 {
     public GameObject MainChar;
     public GameObject E;
+    public string popUp;
+
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -15,7 +17,10 @@ public class treeInteract : MonoBehaviour
             if (Input.GetKeyDown("e"))
             {
                 print("You have collided and pressed 'e'");
-                MainChar.GetComponent<playerMovement>().enabled = false;
+                MainChar.GetComponent<playerMovement>().enabled = true;
+                PopUpSystem pop = GameObject.Find("GameManager").GetComponent<PopUpSystem>();
+                pop.PopUp(popUp);
+
             }
         }
     }

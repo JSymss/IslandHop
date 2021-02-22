@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class treeInteract : MonoBehaviour
+public class TreeInteract : MonoBehaviour
 {
     public GameObject MainChar;
     public GameObject E;
@@ -20,6 +21,7 @@ public class treeInteract : MonoBehaviour
                 MainChar.GetComponent<playerMovement>().enabled = true;
                 PopUpSystem pop = GameObject.Find("GameManager").GetComponent<PopUpSystem>();
                 pop.PopUp(popUp);
+                GameManager.wood += 1;
 
             }
         }

@@ -9,8 +9,9 @@ public class bridge1Script : MonoBehaviour
     // Start is called before the first frame update
 
     public GameObject MainChar;
-    bool bridge1Built = false;
+    public static bool bridge1Built = false;
     public string popUp;
+    public GameObject gm;
     void Start()
     {
         gameObject.GetComponent<Renderer>().enabled = false;
@@ -23,7 +24,7 @@ public class bridge1Script : MonoBehaviour
         {
             if(GameManager.stone >= 2 && GameManager.wood >= 3)
             {
-                if (Input.GetKeyDown("e"))
+                if (Input.GetKey("e"))
                 {
                     gameObject.GetComponent<BoxCollider2D>().enabled = false;
                     print("You have collided and pressed 'e'");
@@ -35,7 +36,7 @@ public class bridge1Script : MonoBehaviour
             }
             else
             {
-                if (Input.GetKeyDown("e"))
+                if (Input.GetKey("e"))
                 {
                     PopUpSystem pop = GameObject.Find("GameManager").GetComponent<PopUpSystem>();
                     pop.PopUp(popUp);

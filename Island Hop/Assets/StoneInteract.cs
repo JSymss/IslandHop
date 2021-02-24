@@ -7,6 +7,7 @@ using UnityEngine;
         public GameObject MainChar;
         public GameObject E;
         public string popUp;
+        public GameObject MiningGame;
 
 
         private void OnTriggerStay2D(Collider2D collision)
@@ -14,15 +15,13 @@ using UnityEngine;
             if (collision.name == "MainChar")
             {
                 E.gameObject.SetActive(true);
-                if (Input.GetKeyDown("e"))
-                {
-                    print("You have collided and pressed 'e'");
-                    MainChar.GetComponent<playerMovement>().enabled = true;
-                    PopUpSystem pop = GameObject.Find("GameManager").GetComponent<PopUpSystem>();
-                    pop.PopUp(popUp);
-                    GameManager.stone += 1;
+                
+                if (Input.GetKey("e"))
+                    {
+                    MiningGame.SetActive(true);
+                    playerMovement.freezePlayer = true;
+                    }
 
-                }
             }
         }
         private void OnTriggerExit2D(Collider2D collision)

@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 251029610}
   - component: {fileID: 251029613}
   - component: {fileID: 251029612}
-  - component: {fileID: 251029611}
   m_Layer: 5
   m_Name: WoodText
   m_TagString: Untagged
@@ -159,22 +158,6 @@ RectTransform:
   m_AnchoredPosition: {x: -50, y: -375}
   m_SizeDelta: {x: 99.999756, y: 100.003876}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &251029611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251029609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e847a0a0bad0ab439fdc0caf92bb25a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainChar: {fileID: 475473436}
-  E: {fileID: 1268174075}
-  woodText: {fileID: 251029612}
-  stoneText: {fileID: 0}
 --- !u!114 &251029612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2161,6 +2144,17 @@ MonoBehaviour:
           m_StringArgument: close
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2067846365}
+        m_MethodName: UpdateUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &723680916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4034,6 +4028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainChar: {fileID: 475473436}
+  popUp: You need more resources!
 --- !u!61 &2110713667
 BoxCollider2D:
   m_ObjectHideFlags: 0

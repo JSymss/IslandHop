@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class bridge1Script : MonoBehaviour
 
@@ -9,6 +10,7 @@ public class bridge1Script : MonoBehaviour
 
     public GameObject MainChar;
     bool bridge1Built = false;
+    public string popUp;
     void Start()
     {
         gameObject.GetComponent<Renderer>().enabled = false;
@@ -19,7 +21,7 @@ public class bridge1Script : MonoBehaviour
     {
         if (collision.name == "MainChar" && bridge1Built == false)
         {
-            if(GameManager.stone > 2 && GameManager.wood > 3)
+            if(GameManager.stone >= 2 && GameManager.wood >= 3)
             {
                 if (Input.GetKeyDown("e"))
                 {
@@ -33,7 +35,13 @@ public class bridge1Script : MonoBehaviour
             }
             else
             {
-                print("You need more resources");
+                if (Input.GetKeyDown("e"))
+                {
+                    PopUpSystem pop = GameObject.Find("GameManager").GetComponent<PopUpSystem>();
+                    pop.PopUp(popUp);
+                    print("You need more resources");
+                }
+               
             }
             
             

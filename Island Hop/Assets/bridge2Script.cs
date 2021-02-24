@@ -19,7 +19,7 @@ public class bridge2Script : MonoBehaviour
     {
         if (collision.name == "MainChar" && bridge2Built == false)
         {
-            if (GameManager.stone > 2 && GameManager.wood > 3)
+            if (GameManager.stone >= 2 && GameManager.wood >= 3)
             {
                 if (Input.GetKeyDown("e"))
                 {

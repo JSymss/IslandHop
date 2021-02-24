@@ -14,6 +14,7 @@ public class TreeInteract : MonoBehaviour
     {
         if(collision.name == "MainChar")
         {
+            //collision.gameobject.GetComponent<Player>().interactionTarget = this.gameobject
             E.gameObject.SetActive(true);
             if (Input.GetKeyDown("e"))
             {
@@ -29,5 +30,6 @@ public class TreeInteract : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         E.gameObject.SetActive(false);
+        //collision.gameobject.GetComponent<Player>().interactionTarget = null
     }
 }

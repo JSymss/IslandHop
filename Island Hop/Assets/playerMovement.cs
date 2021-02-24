@@ -5,6 +5,7 @@ using UnityEngine;
 public class playerMovement : MonoBehaviour
 {
     public float speed = 7.5f;
+    //gameobject interactiontarget
 
     // Update is called once per frame
     void Update()
@@ -28,5 +29,9 @@ public class playerMovement : MonoBehaviour
             pos.x += speed * Time.deltaTime;
         }
         transform.position = pos;
+        
+        //input
+            //if interactionTarget != null
+                //All the wood gather things
     }
 }

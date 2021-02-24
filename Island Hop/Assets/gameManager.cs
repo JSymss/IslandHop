@@ -23,15 +23,20 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
-        woodText.text = ""+wood;
+
         if (Input.GetKeyDown("1"))
         {
             wood++;
         }
-        stoneText.text = ""+stone;
         if (Input.GetKeyDown("2"))
         {
             stone++;
         }
+    }
+
+    public void UpdateUI()
+    {
+        stoneText.text = "" + stone;
+        woodText.text = "" + wood;
     }
 }

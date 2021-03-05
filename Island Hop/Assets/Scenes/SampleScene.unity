@@ -1535,6 +1535,7 @@ GameObject:
   - component: {fileID: 475473441}
   - component: {fileID: 475473439}
   - component: {fileID: 475473440}
+  - component: {fileID: 475473442}
   m_Layer: 0
   m_Name: MainChar
   m_TagString: Untagged
@@ -1619,6 +1620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a97445d1d68164081ad0bdf9ee2bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 475473442}
   speed: 2.5
 --- !u!70 &475473440
 CapsuleCollider2D:
@@ -1657,6 +1659,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &475473442
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475473436}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e35976d5c9dd55f4b96041f292601c7b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &510990715
 GameObject:
   m_ObjectHideFlags: 0
@@ -2858,6 +2879,7 @@ GameObject:
   - component: {fileID: 1170314591}
   - component: {fileID: 1170314592}
   - component: {fileID: 1170314593}
+  - component: {fileID: 1170314594}
   m_Layer: 0
   m_Name: Bridge Piece 2
   m_TagString: Untagged
@@ -2904,7 +2926,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 90090c41429fb9340b40770210260cdc, type: 3}
+  m_Sprite: {fileID: -3098459612603900478, guid: 827bc7808002fd04988739ff8638ff5a,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2923,8 +2946,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170314588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.46, y: 0.13, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.4898, y: 0.1547, z: 0}
+  m_LocalScale: {x: 0.531412, y: 1.8931997, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -2946,7 +2969,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 2.56, y: 1.28}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2968,6 +2991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainChar: {fileID: 475473436}
+  animator: {fileID: 1170314594}
 --- !u!61 &1170314593
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2985,7 +3009,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 2.56, y: 1.28}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2994,6 +3018,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.807654, y: 1.5050294}
   m_EdgeRadius: 0
+--- !u!95 &1170314594
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170314588}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d9e43c314b7776347a68433d7f6f7c2d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1176572258
 GameObject:
   m_ObjectHideFlags: 0
@@ -9329,6 +9372,7 @@ GameObject:
   - component: {fileID: 2110713666}
   - component: {fileID: 2110713667}
   - component: {fileID: 2110713668}
+  - component: {fileID: 2110713669}
   m_Layer: 0
   m_Name: Bridge Piece
   m_TagString: Untagged
@@ -9375,7 +9419,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 90090c41429fb9340b40770210260cdc, type: 3}
+  m_Sprite: {fileID: -3098459612603900478, guid: 827bc7808002fd04988739ff8638ff5a,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9394,8 +9439,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110713663}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.19, y: 0.13, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5.1265, y: 0.1494, z: 0}
+  m_LocalScale: {x: 0.5383133, y: 1.8852171, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -9415,6 +9460,7 @@ MonoBehaviour:
   MainChar: {fileID: 475473436}
   popUp: You need more resources!
   gm: {fileID: 0}
+  animator: {fileID: 2110713669}
 --- !u!61 &2110713667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9432,7 +9478,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 2.56, y: 1.28}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9458,7 +9504,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 2.56, y: 1.28}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9467,3 +9513,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8179337, y: 1.8092563}
   m_EdgeRadius: 0
+--- !u!95 &2110713669
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110713663}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1fa23af0a6bd78c49adf448c4b152120, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -9,10 +9,9 @@ public class bridge2Script : MonoBehaviour
 
     public GameObject MainChar;
     public static bool bridge2Built = false;
-    void Start()
-    {
-        gameObject.GetComponent<Renderer>().enabled = false;
-    }
+    public Animator animator;
+
+
 
     // Update is called once per frame
     private void OnTriggerStay2D(Collider2D collision)
@@ -25,7 +24,7 @@ public class bridge2Script : MonoBehaviour
                 {
                     gameObject.GetComponent<BoxCollider2D>().enabled = false;
                     print("You have collided and pressed 'e'");
-                    gameObject.GetComponent<Renderer>().enabled = true;
+                    animator.SetBool("bridge2", true);
                     bridge2Built = true;
                     GameManager.wood -= 4;
                     GameManager.stone -= 3;
